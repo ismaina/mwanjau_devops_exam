@@ -27,6 +27,9 @@ try {
         stage('Apply changes to the environment'){
             sh "ls -l"
         }
+         stage('Run the docker image'){
+            sh "docker run -d --restart=always -p 8080:80 mwanjau_devops_exam:latest "
+        }
 
     }
 } catch(Error|Exception e) {
