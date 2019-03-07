@@ -30,9 +30,14 @@ try {
         stage('Apply changes to the environment'){
             sh "ls -l"
         }
-         stage('Run the docker image'){
+        stage('Run the docker image'){
             sh "docker container run -d mwanjau/mwanjau_devops_exam:latest"
         }
+
+        stage('Check if docker container is running'){
+            sh "docker ps -a"
+        }
+
 
     }
 } catch(Error|Exception e) {
