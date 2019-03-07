@@ -1,0 +1,12 @@
+a:hover { 
+    background-color: #79cf79;
+   
+    text-shadow: 2px 2px #3c3a3a;
+}
+@media only screen and (max-width : 400px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 10px;
+    }
+  }
