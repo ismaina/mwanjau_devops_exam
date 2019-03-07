@@ -31,7 +31,7 @@ try {
             sh "ls -l"
         }
          stage('Run the docker image'){
-            sh "docker run -it mwanjau/mwanjau_devops_exam:latest bash"
+            sh "docker container run -d mwanjau/mwanjau_devops_exam:latest"
         }
 
     }
