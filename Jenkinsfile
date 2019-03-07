@@ -24,11 +24,14 @@ try {
         stage('Apply changes to the environment'){
             sh "ls -l"
         }
+        stage('Check the docker image'){
+            sh "docker image ls"
+        }
         stage('Apply changes to the environment'){
             sh "ls -l"
         }
          stage('Run the docker image'){
-            sh "docker run -d --restart=always -p 8080:80 mwanjau_devops_exam:latest "
+            sh "docker run -it mwanjau/mwanjau_devops_exam:latest bash"
         }
 
     }
